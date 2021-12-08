@@ -1,0 +1,39 @@
+.footer-wrapper {
+    width: 85%;
+    position: fixed;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    font-size: 1.25em;
+    border-top: 1px #D0D0D0 solid;
+    background-color: #F0F0F0F0;
+    z-index:2;
+}
+
+.logo-container {
+
+}
+
+.text-container {
+    margin: 0 20%;
+}
+
+.link-container {
+
+}
+
+.logo {
+    max-height: 70px;
+    max-width: 150px;
+}
+
+.footerLink{
+
+}
+
+.gitIcon{
+
+}
+

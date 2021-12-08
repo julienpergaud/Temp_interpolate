@@ -1,0 +1,14 @@
+[Unit]
+Description=Gunicron instance to serve envirodb
+After=network target
+
+[Service]
+User=enviroad
+Group=www-data
+WorkingDirectory=/home/enviroad/www/webservice-popsu/services/web/
+Environment="/home/enviroad/www/webservice-popsu/venv/bin"
+EnvironmentFile=/home/enviroad/www/webservice-popsu/.envctl
+ExecStart=/home/enviroad/www/webservice-popsu/venv/bin/gunicorn --workers 3 --bind unix:envirodb.sock -m 007 project.app:app --timeout 30
+
+[Install]
+WantedBy=multi-user-target 

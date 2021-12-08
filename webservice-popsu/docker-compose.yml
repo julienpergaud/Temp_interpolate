@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  web:
+    build: ./services/web
+    command: python manage.py run -h 0.0.0.0
+    volumes:
+      - ./services/web/:/usr/src/app/
+    ports:
+      - 5000:5000
+    env_file:
+      - ./.env.dev
+      - services/web/project/database.conf
+    depends_on:
+      - db        
+  db:
+    build: ./services/db
+    volumes:
+      - sro_postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - services/web/project/database.conf
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - db  
+volumes:
+  sro_postgres_data:

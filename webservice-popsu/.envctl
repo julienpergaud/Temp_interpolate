@@ -1,0 +1,11 @@
+FLASK_APP=project/app.py
+FLASK_ENV=production
+DATABASE_URL=postgresql://example:example@db:5432/hello_flask_dev
+APP_FOLDER=/home/app/web
+POSTGRES_USER=envirodb
+POSTGRES_PASSWORD=envir0db
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_DB=dbuser
+SECRET_KEY=b'z\xc8\x00\xc5z\x00\xc42Z\xaaz\x9d\x98\x8b\x05\xb7\xd2Q\x01I\xa2\x08\xce\xbd'
+

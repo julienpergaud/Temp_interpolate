@@ -1,0 +1,39 @@
+version: "3.6"
+
+services:
+  web:
+    build: 
+       context : ./services/web
+       dockerfile : Dockerfile.prod
+    command: gunicorn --bind 0.0.0.0:5000 project.app:app
+    expose:
+      - 5000
+    env_file:
+      - ./.env.prod
+      - services/web/project/database.conf
+    depends_on:
+      - db        
+  db:
+    build: ./services/db
+    volumes:
+      - sro_postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - services/web/project/database.conf
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - db 
+ 
+  nginx:
+      build : ./services/nginx
+      ports:
+          - 80:80 
+      depends_on:
+          - web
+
+volumes:
+  sro_postgres_data:

@@ -1,0 +1,36 @@
+{
+"config": {
+	"header" : {
+		"content" : ""
+	},
+	
+	"footer" : {
+		"files" : ["logo1.png","logo2.png","logo4.jpeg"],
+		"content" : "Projet développé par Biogéosciences et financé par l'OSU Theta",
+		"link" : "https://biogeosciences.u-bourgogne.fr/",
+		"linkMotif" : "Biogéosciences"
+	},
+	"params" : {
+		"cas" : [],
+		"nbgraph" : "6"
+	},
+	"admin" : {
+		"login" : "admin",
+		"password" : "123456",
+		"email" : "test@gmail.com"
+	},
+	"smtp" : {
+		"MAIL_SERVER" : "smtp.gmail.com",
+		"MAIL_PORT" : "465",
+		"MAIL_USE_TLS" : "False",
+		"MAIL_USE_SSL" : "True",
+		"MAIL_DEBUG" : "True",
+		"MAIL_USERNAME" : "envirodb.ufr@gmail.com",
+		"MAIL_PASSWORD" : "envirodb2020",
+		"MAIL_DEFAULT_SENDER" : "envirodb.ufr@gmail.com",
+		"MAIL_MAX_EMAILS" : "None",
+		"MAIL_SUPPRESS_SEND" : "False",
+		"MAIL_ASCII_ATTACHEMENTS" : "False"
+	}
+}
+}
