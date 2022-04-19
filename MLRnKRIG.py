@@ -167,14 +167,18 @@ def MLRnKRIG(case, temp_date, MinNbSta, dirout, pred_sta, coord_sta, pred_grid, 
 # Build a dataframe with Station name, Temp & predictors 
 
       Y = data.T
+      print(data)
       Y.set_axis(['Temp'], axis=1, inplace=True)
-  
+      print(Y.index)
       X = pred_sta
+      print(X.index)
 
-      df = pd.merge(Y, X, on=Y.index, how='left')
-      df = df.rename(columns = {'key_0':'Station'})
+      df = pd.merge(Y, X, how='inner',left_index=True,right_index=True)
+      print(df)
+      df.reset_index(inplace=True)
+      df = df.rename(columns = {'index':'Station'})
+      print(df)
       df['Temp'] = df['Temp'].astype(float)
-
       del Y
       del X
 

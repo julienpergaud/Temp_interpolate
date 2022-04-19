@@ -1,0 +1,54 @@
+2020-03-03 15:42:40,222 :: WARNING :: Fenêtre temporelle incorrecte.
+	hour: -24
+
+2020-03-03 15:42:41,028 :: ERROR :: Requête incorrecte.
+	Requête: {'action': 'get_data', 'authentication': {'password': 'hobolink', 'token': 'ebf2c17beabc692f6bf4192ed64c3f32f0358f68', 'user': 'marega77'}, 'query': {'end_date_time': '2020-03-03 15:42:40', 'loggers': [20744236, 20744246, 20744244], 'start_date_time': None}}
+
+2020-03-03 15:43:06,301 :: WARNING :: Fenêtre temporelle incorrecte.
+	hour: -24
+
+2020-03-03 15:43:07,042 :: ERROR :: Requête incorrecte.
+	Requête: {'action': 'get_data', 'authentication': {'password': 'hobolink', 'token': 'ebf2c17beabc692f6bf4192ed64c3f32f0358f68', 'user': 'marega77'}, 'query': {'end_date_time': '2020-03-03 15:43:06', 'loggers': [20744236, 20744246, 20744244], 'start_date_time': None}}
+
+2020-03-03 15:50:41,558 :: WARNING :: Fenêtre temporelle incorrecte.
+	hour: -24
+
+2020-03-03 15:50:42,327 :: ERROR :: Requête incorrecte.
+	Requête: {'action': 'get_data', 'authentication': {'password': 'hobolink', 'token': 'ebf2c17beabc692f6bf4192ed64c3f32f0358f68', 'user': 'marega77'}, 'query': {'end_date_time': '2020-03-03 15:50:41', 'loggers': [20744236, 20744246, 20744244], 'start_date_time': None}}
+
+2020-03-03 15:51:34,568 :: WARNING :: Fenêtre temporelle incorrecte.
+	hour: -24
+
+2020-03-03 15:51:35,316 :: ERROR :: Requête incorrecte.
+	Requête: {'action': 'get_data', 'authentication': {'password': 'hobolink', 'token': 'ebf2c17beabc692f6bf4192ed64c3f32f0358f68', 'user': 'marega77'}, 'query': {'end_date_time': '2020-03-03 15:51:34', 'loggers': [20744236, 20744246, 20744244], 'start_date_time': None}}
+
+2020-03-03 15:52:59,684 :: WARNING :: Fenêtre temporelle incorrecte.
+	hour: -24
+
+2020-03-03 15:53:00,448 :: ERROR :: Requête incorrecte.
+	Requête: {'action': 'get_data', 'authentication': {'password': 'hobolink', 'token': 'ebf2c17beabc692f6bf4192ed64c3f32f0358f68', 'user': 'marega77'}, 'query': {'end_date_time': '2020-03-03 15:52:59', 'loggers': [20744236, 20744246, 20744244], 'start_date_time': None}}
+
+2020-03-03 15:53:47,088 :: WARNING :: Fenêtre temporelle incorrecte.
+	hour: -24
+
+2020-03-03 15:53:47,838 :: ERROR :: Requête incorrecte.
+	Requête: {'action': 'get_data', 'authentication': {'password': 'hobolink', 'token': 'ebf2c17beabc692f6bf4192ed64c3f32f0358f68', 'user': 'marega77'}, 'query': {'end_date_time': '2020-03-03 15:53:47', 'loggers': [20744236, 20744246, 20744244], 'start_date_time': None}}
+
+2020-03-03 16:09:50,258 :: WARNING :: Fenêtre temporelle incorrecte.
+	hour: -24
+
+2020-03-03 16:09:51,039 :: ERROR :: Requête incorrecte.
+	Requête: {'action': 'get_data', 'authentication': {'password': 'hobolink', 'token': 'ebf2c17beabc692f6bf4192ed64c3f32f0358f68', 'user': 'marega77'}, 'query': {'end_date_time': '2020-03-03 16:09:50', 'loggers': [20744236, 20744246, 20744244], 'start_date_time': None}}
+
+2020-03-04 09:51:23,756 :: WARNING :: Fenêtre temporelle incorrecte.
+	hour: -24
+
+2020-03-04 09:51:24,597 :: ERROR :: Requête incorrecte.
+	Requête: {'action': 'get_data', 'authentication': {'password': 'hobolink', 'token': 'ebf2c17beabc692f6bf4192ed64c3f32f0358f68', 'user': 'marega77'}, 'query': {'end_date_time': '2020-03-04 09:51:23', 'loggers': [20744236, 20744246, 20744244], 'start_date_time': None}}
+
+2020-03-04 09:54:41,595 :: WARNING :: Fenêtre temporelle incorrecte.
+	hour: -24
+
+2020-03-04 09:54:42,376 :: ERROR :: Requête incorrecte.
+	Requête: {'action': 'get_data', 'authentication': {'password': 'hobolink', 'token': 'ebf2c17beabc692f6bf4192ed64c3f32f0358f68', 'user': 'marega77'}, 'query': {'end_date_time': '2020-03-04 09:54:41', 'loggers': [20744236, 20744246, 20744244], 'start_date_time': None}}
+

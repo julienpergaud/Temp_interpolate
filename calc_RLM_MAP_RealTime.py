@@ -5,6 +5,10 @@
 import pandas as pd
 import numpy as np
 import MLRnKRIG as model
+from HOBOAdapter import HoboAdapter
+#from project.hobo import ArchiveLog
+import datetime as dtime
+import numpy as np
 
 #############################################################################################
 
@@ -15,25 +19,13 @@ import MLRnKRIG as model
 
 # Select subperiod :Each subperiod = 4999 timesteps
 #case = ['2019-01-13 04:00:00', '2019-02-02 02:00:00', '2016-03-04 06:00:00', '2017-04-27 12:00:00', '2015-05-10 07:00:00', '2019-06-15 10:00:00', '2014-07-18 07:00:00', '2017-08-15 07:00:00', '2015-09-21 09:00:00', '2015-10-30 22:00:00', '2014-11-22 11:00:00', '2015-12-31 22:00:00']
-case = ['2019-01-13 20:00:00']
+case = ['2021-01-13 20:00:00']
 
 # Minimum number of stations with no missing value for interpolating temp
 mini_nb_sta = 40
 
 
-# TODO extract données from hobolink and create dataframe with data in index and stations as columns
-
-
-
-
-
-
-# Path in/out
-dirin_temp = './'
-dirin_pred = './'
-dirout = './Results/'
-
-
+# TODO extract donnees from hobolink and create dataframe with data in index and stations as columns
 #############################################################################################
 
 
@@ -42,7 +34,41 @@ dirout = './Results/'
 # Load data
 
 # Hourly temp measurec-d by the MUSTARDijon netork
-MUSTARDijon = pd.read_csv(dirin_temp+'TEMPICU_2014_2020.csv', sep=',', quotechar='"', index_col=0)
+
+
+hobo = HoboAdapter()
+hobo.downloadtData()
+
+print("data")
+print(hobo.data)
+case=hobo.data.index.values
+
+# Select subperiod :Each subperiod = 4999 timesteps
+#case = ['2021-01-13 20:00:00']
+
+print(case)
+case=list(map(lambda x: np.datetime_as_string(x,unit="s"),case))
+case=list(map(lambda x: x.replace('T',' '),case))
+
+
+# Path in/out
+dirin_temp = './'
+dirin_pred = './'
+dirout = './Results/'
+
+MUSTARDijon=hobo.data
+columns=list(map(lambda x: x.split('c')[1],MUSTARDijon.columns))
+columns=list(map(lambda x: 'S'+x,columns))
+MUSTARDijon.columns=columns
+MUSTARDijon.index.rename('Time', inplace=True)      
+MUSTARDijon.index=case
+MUSTARDijon.index.rename('Time', inplace=True)      
+
+#############################################################################################
+
+
+
+#############################################################################################
 
 
 def spatialMustard(case,MUSTARDijon,dirin_temp,dirin_pred,dirout,mini_nb_sta):
